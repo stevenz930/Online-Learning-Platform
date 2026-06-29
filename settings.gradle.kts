@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ITP4203"
+rootProject.name = "Online-Learning-Platform"
 include(":app")
  

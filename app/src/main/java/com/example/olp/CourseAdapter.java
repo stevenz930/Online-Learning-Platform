@@ -1,4 +1,4 @@
-package com.example.itp4203;
+package com.example.olp;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-import com.example.itp4203.room.model.Course;
+import com.example.olp.room.model.Course;
 
 
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseViewHolder> {

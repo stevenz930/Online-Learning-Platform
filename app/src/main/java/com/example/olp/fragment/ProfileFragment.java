@@ -1,4 +1,4 @@
-package com.example.itp4203.fragment;
+package com.example.olp.fragment;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.itp4203.R;
+import com.example.olp.R;
 
 public class ProfileFragment extends Fragment {
     @Override

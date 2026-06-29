@@ -1,4 +1,4 @@
-package com.example.itp4203.room.dao;
+package com.example.olp.room.dao;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.itp4203.room.model.Course;
+import com.example.olp.room.model.Course;
 
 import java.util.List;
 

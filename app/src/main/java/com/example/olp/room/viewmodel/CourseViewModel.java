@@ -1,4 +1,4 @@
-package com.example.itp4203.room.viewmodel;
+package com.example.olp.room.viewmodel;
 import android.app.Application;
 import android.widget.Toast;
 
@@ -8,9 +8,9 @@ import androidx.room.Room;
 
 import java.util.List;
 
-import com.example.itp4203.room.dao.CourseDao;
-import com.example.itp4203.room.database.AppDatabase;
-import com.example.itp4203.room.model.Course;
+import com.example.olp.room.dao.CourseDao;
+import com.example.olp.room.database.AppDatabase;
+import com.example.olp.room.model.Course;
 
 public class CourseViewModel extends AndroidViewModel {
     private CourseDao courseDao;

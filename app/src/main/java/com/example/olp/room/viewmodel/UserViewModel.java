@@ -1,4 +1,4 @@
-package com.example.itp4203.room.viewmodel;
+package com.example.olp.room.viewmodel;
 import android.app.Application;
 import android.widget.Toast;
 
@@ -7,9 +7,9 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import com.example.itp4203.room.dao.UserDao;
-import com.example.itp4203.room.database.AppDatabase;
-import com.example.itp4203.room.model.User;
+import com.example.olp.room.dao.UserDao;
+import com.example.olp.room.database.AppDatabase;
+import com.example.olp.room.model.User;
 
 public class UserViewModel extends AndroidViewModel {
     private UserDao userDao;

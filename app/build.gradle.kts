@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.itp4203"
+    namespace = "com.example.olp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.itp4203"
+        applicationId = "com.example.olp"
         minSdk = 35
         targetSdk = 35
         versionCode = 1

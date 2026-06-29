@@ -1,4 +1,4 @@
-package com.example.itp4203.room.dao;
+package com.example.olp.room.dao;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -8,7 +8,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import com.example.itp4203.room.model.User;
+import com.example.olp.room.model.User;
 
 @Dao
 public interface UserDao {

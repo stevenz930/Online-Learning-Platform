@@ -1,4 +1,4 @@
-package com.example.itp4203.fragment;
+package com.example.olp.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,10 +12,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.itp4203.R;
-import com.example.itp4203.CourseAdapter;
-import com.example.itp4203.room.model.Course;
-import com.example.itp4203.room.viewmodel.CourseViewModel;
+import com.example.olp.R;
+import com.example.olp.CourseAdapter;
+import com.example.olp.room.model.Course;
+import com.example.olp.room.viewmodel.CourseViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

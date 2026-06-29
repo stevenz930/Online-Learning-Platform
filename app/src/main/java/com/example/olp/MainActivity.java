@@ -1,4 +1,4 @@
-package com.example.itp4203;
+package com.example.olp;
 
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +13,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.itp4203.fragment.CourseListFragment;
-import com.example.itp4203.fragment.HomeFragment;
-import com.example.itp4203.fragment.ProfileFragment;
+import com.example.olp.fragment.CourseListFragment;
+import com.example.olp.fragment.HomeFragment;
+import com.example.olp.fragment.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 

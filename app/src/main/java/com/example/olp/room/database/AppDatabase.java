@@ -1,13 +1,13 @@
-package com.example.itp4203.room.database;
+package com.example.olp.room.database;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import android.content.Context;
 
-import com.example.itp4203.room.dao.CourseDao;
-import com.example.itp4203.room.dao.UserDao;
-import com.example.itp4203.room.model.Course;
-import com.example.itp4203.room.model.User;
+import com.example.olp.room.dao.CourseDao;
+import com.example.olp.room.dao.UserDao;
+import com.example.olp.room.model.Course;
+import com.example.olp.room.model.User;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

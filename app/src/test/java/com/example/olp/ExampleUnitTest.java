@@ -1,4 +1,4 @@
-package com.example.itp4203;
+package com.example.olp;
 
 import org.junit.Test;
 
