@@ -36,7 +36,12 @@ Open android-app/ in Android Studio → Sync Gradle → Run (API 35)
 
 ## php-api — PHP Backend
 
-31+ REST API endpoints for the platform:
+**Native PHP · MySQL (mysqli) · Apache · XAMPP**
+
+Runs on **XAMPP** — place `php-api/htdocs/` as the XAMPP web root (or symlink to `htdocs/`).  
+Database: `project` (MySQL), config in `api/config.php`.
+
+31+ REST API endpoints:
 
 | Category | Endpoints |
 |----------|-----------|
