@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">itp4229m</string>
+    <string name="api_url">http://localhost/api/</string>
+    <string-array name="subjects">
+        <item>Data Science</item>
+        <item>Web Development</item>
+        <item>Artificial Intelligence</item>
+        <item>Cybersecurity</item>
+        <item>Mobile Development</item>
+        <item>Cloud Computing</item>
+    </string-array>
+    <string-array name="payment_methods">
+        <item>Credit Card</item>
+        <item>AliPay HK</item>
+        <item>WeChat Pay</item>
+        <item>PayPal</item>
+        <item>Google Pay</item>
+    </string-array>
+</resources>

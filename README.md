@@ -1,72 +1,77 @@
 # Online Learning Platform
 
-An Android application built with Java that serves as an online learning platform with local data persistence.
-
-## Features
-
-- **Home** — View and manage users with add/delete operations
-- **Courses** — Browse and manage courses with add/delete operations
-- **Profile** — Placeholder profile fragment
-- **Local Database** — Uses Room (SQLite) for offline data storage
-- **MVVM Architecture** — ViewModel + LiveData pattern for reactive UI updates
-
-## Tech Stack
-
-| Component       | Technology                |
-|-----------------|---------------------------|
-| Language        | Java                      |
-| UI              | XML Layouts, RecyclerView |
-| Architecture    | Fragment + ViewModel      |
-| Database        | Room (SQLite)             |
-| Build System    | Gradle (Kotlin DSL)       |
-| Min SDK         | 35 (Android 15)           |
-| Target SDK      | 35                        |
+A full-stack online learning platform consisting of an **Android mobile app**, a **PHP REST API backend**, and a **Vue 3 web frontend**.
 
 ## Project Structure
 
 ```
-app/
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/olp/
-│   │   │   ├── MainActivity.java          # Main entry with bottom navigation
-│   │   │   ├── CourseAdapter.java         # RecyclerView adapter for courses
-│   │   │   ├── UserAdapter.java           # RecyclerView adapter for users
-│   │   │   ├── fragment/
-│   │   │   │   ├── HomeFragment.java      # User list with add/delete
-│   │   │   │   ├── CourseListFragment.java # Course list with add/delete
-│   │   │   │   └── ProfileFragment.java    # Profile placeholder
-│   │   │   └── room/
-│   │   │       ├── model/
-│   │   │       │   ├── User.java           # User entity
-│   │   │       │   └── Course.java         # Course entity
-│   │   │       ├── dao/
-│   │   │       │   ├── UserDao.java        # User data access
-│   │   │       │   └── CourseDao.java      # Course data access
-│   │   │       ├── database/
-│   │   │       │   └── AppDatabase.java    # Room database singleton
-│   │   │       └── viewmodel/
-│   │   │           ├── UserViewModel.java  # ViewModel for users
-│   │   │           └── CourseViewModel.java # ViewModel for courses
-│   │   ├── res/
-│   │   │   ├── layout/                    # XML layouts
-│   │   │   ├── values/                    # Themes, strings, etc.
-│   │   │   └── ...
-│   │   └── AndroidManifest.xml
-│   ├── test/                              # Unit tests
-│   └── androidTest/                       # Instrumented tests
+Online-Learning-Platform/
+├── android-app/          # Android mobile app (Java)
+├── php-api/              # PHP REST API backend
+├── vue-web/              # Vue 3 web frontend
+└── README.md
 ```
 
-## How to Build & Run
+---
 
-1. Open the project in **Android Studio**.
-2. Sync Gradle and let dependencies resolve.
-3. Select a device/emulator running **Android 15 (API 35)**.
-4. Click **Run** (`^R`).
+## android-app — Android Mobile App
 
-## Database
+**Java · Retrofit/OkHttp · Glide**
 
-Room database (`app_database`) contains two tables:
+A feature-rich Android client for browsing courses, watching lessons, taking tests, managing enrollment, and user authentication.
 
-- **`user_table`** — Stores user profiles (username, password, name, email, social links, avatar, etc.)
-- **`course_table`** — Stores course info (title, description, level, price, timestamps)
+| Category | Key Files |
+|----------|-----------|
+| **Activities** | `MainActivity.java`, `LoginRegisterActivity.java`, `CourseDetailActivity.java`, `EnrollActivity.java`, `LessonDetailActivity.java` |
+| **Fragments** | `HomeFragment`, `CoursesFragment`, `SearchFragment`, `AccountFragment`, `LoginFragment`, `RegisterFragment`, `CourseDetailLessonFragment`, `CourseDetailReviewFragment`, `LessonDetailContentFragment`, `LessonDetailTestFragment` |
+| **Adapters** | 8 RecyclerView adapters for home, courses, cart, search, enrollment, reviews, lessons |
+| **Networking** | Retrofit `ApiService` with models: `Course`, `User`, `Subject`, `Review`, `Lesson`, `Cart`, `Enrollment` |
+
+**Build & Run:**
+```
+Open android-app/ in Android Studio → Sync Gradle → Run (API 35)
+```
+
+---
+
+## php-api — PHP Backend
+
+31+ REST API endpoints for the platform:
+
+| Category | Endpoints |
+|----------|-----------|
+| **Auth** | `login`, `register`, `logout`, `login-user` |
+| **Courses** | `get-all-course`, `get-course`, `get-some-course`, `add-course`, `get-course-for-edit-page`, `search` |
+| **Users** | `get-some-user`, `get-all-instructor`, `post-profile`, `post-be-instructor` |
+| **Reviews** | `get-all-review-by-course`, `post-review`, `delete-review`, `update-review-data` |
+| **Subjects** | `get-all-subject`, `get-category-subject` |
+| **Rankings** | `get-top10-popular-course`, `get-top10-rating-course` (by subject) |
+| **Lessons** | `get-all-lesson-by-course` |
+| **Tests** | `get-test`, `post-test` |
+| **Cart** | `delete-cart-item` |
+
+---
+
+## vue-web — Vue 3 Web Frontend
+
+**Vue 3 · Vite · Pinia · Vue Router · Bootstrap · Axios · Sass**
+
+Admin management interface with CRUD operations.
+
+```
+src/
+├── views/        — 11 pages: Login, Main, Course, User, Review,
+│                   AddCourse, AddLesson, AddUser, EditCourse,
+│                   EditReview, EditUser
+├── components/   — Nav.vue, Modal.vue
+├── stores/       — useAuthStore.js, currentPageInMain.js
+├── router/       — index.js
+└── assets/
+```
+
+**Run:**
+```
+cd vue-web/vite-project
+npm install
+npm run dev
+```
